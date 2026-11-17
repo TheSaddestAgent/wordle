@@ -4,65 +4,6 @@
 #include <ctime>
 #include <iostream>
 
-class IntVector {
-   private:
-    size_t capacity_;
-    size_t size_;
-
-   public:
-    int* data_;
-    void push(int x) {
-        if (size_ >= capacity_) {
-            if (capacity_ == 0) {
-                capacity_ = 1;
-            } else {
-                capacity_ *= 2;
-            }
-            int* new_data = new int[capacity_];
-            for (size_t i = 0; i < size_; i++) {
-                new_data[i] = data_[i];
-            }
-            delete[] data_;
-            data_ = new_data;
-        }
-        data_[size_] = x;
-        size_++;
-    }
-
-    IntVector() {
-        capacity_ = 0;
-        size_ = 0;
-        data_ = new int[capacity_];
-    }
-
-    IntVector(size_t size) {
-        capacity_ = size;
-        size_ = size;
-        data_ = new int[capacity_];
-    }
-
-    ~IntVector() {
-        delete[] data_;
-    }
-
-    size_t GetSize() {
-        return size_;
-    }
-
-    void Clear() {
-        size_ = 0;
-    }
-
-    int* GetData() {
-        int* result = new int[size_ + 1];
-
-        for (size_t i = 0; i < size_; ++i) {
-            result[i] = data_[i];
-        }
-        return result;
-    }
-};
-
 class OneWordVector {
    private:
     size_t capacity_;
