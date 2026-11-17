@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/dmitr/ITMO/demo_livecoding1/build",
+  "command": "/usr/bin/c++   -std=c++23 -o CMakeFiles/DemoLivecoding.dir/main.cpp.o -c /home/dmitr/ITMO/demo_livecoding1/main.cpp",
+  "file": "/home/dmitr/ITMO/demo_livecoding1/main.cpp",
+  "output": "CMakeFiles/DemoLivecoding.dir/main.cpp.o"
+}
+]
